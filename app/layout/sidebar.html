@@ -1,13 +1,88 @@
 
-<div class="nav-wrapper">
+<div class="nav-wrapper" >
+
+
     <ul id="nav"
         class="nav"
-        data-slim-scroll
+        data-slim-scroll 
         data-collapse-nav
         data-highlight-active>
         <li class="nav-title"> <span data-translate="NAVIGATION"></span> </li>
         <li><a md-button aria-label="menu" href="#!/dashboard"><i class="material-icons">home</i><span data-translate="DASHBOARD"></span></a></li>
-        <li><a md-button aria-label="menu" href="javascript:;" toggle-quickview data-target="GOPI_customizer"><i class="material-icons">settings</i><span data-translate="GOPI_CUSTOMIZER"></span></a></li>
+
+        <li><md-menu><a md-button style="margin-bottom: 12%;" aria-label="menu" href="javascript:;"   ng-click="$mdOpenMenu($event)"  data-target="STATE_customizer"> <span data-translate="STATE_CUSTOMIZER"></span></a>
+
+        
+            
+                <md-menu-content  id="messages"   >
+                <div class='column' style="padding-right: 39%;">
+                <ul style="padding-right: 39%;">
+                    <li ng-mouseover="TN=true;KE=false;KA=false;GA=false"   > Tamilnadu</li>
+                    <li ng-mouseover="TN=false;KE=true;KA=false;GA=false"   > kerala</li>
+                    <li ng-mouseover="TN=false;KE=false;KA=true;GA=false"   > karnataka</li>
+                </ul>
+               </div>
+ 
+<!-- TamilNadu -->
+<div layout="column" >
+  <div ng-show="TN"  style="float: right;margin-top: 1%;">
+<md-content layout-padding  class="cont">
+<img src="img/TN.jpg" alt="TamilNadu" style="width:150px;">Tamil Nadu, a South Indian state, is famed for its Dravidian-style Hindu temples. In Madurai, Meenakshi Amman Temple has high ‘gopuram’ towers ornamented with colourful figures. On Pamban Island, Ramanathaswamy Temple is a pilgrimage site. The town of Kanyakumari, at India’s southernmost tip, is the site of ritual sunrises. Capital Chennai is known for beaches and landmarks including 1644 colonial Fort St. George.
+    <a href="https://en.wikipedia.org/wiki/Tamil_Nadu">more ...</a>
+</md-content>
+</div>
+ </div>           
+
+
+<!-- kerala -->
+<div layout="column" >
+  <div ng-show="KE"  style="float: right;margin-top: 1%;">
+<md-content layout-padding  class="cont">
+<img src="img/KE.jpg" alt="Kerala" style="width:150px;">
+    Kerala, a state on India's tropical Malabar Coast, has nearly 600km of Arabian Sea shoreline. It's known for its palm-lined beaches and backwaters, a network of canals. Inland are the Western Ghats, mountains whose slopes support tea, coffee and spice plantations as well as wildlife. National parks like Eravikulam and Periyar, plus Wayanad and other sanctuaries, are home to elephants, langur monkeys and tigers.
+    <a href="https://en.wikipedia.org/wiki/Kerala">more ...</a>
+</md-content>
+</div>
+ </div>
+
+ <!-- karnataka -->
+<div layout="column" >
+  <div ng-show="KA"  style="float: right;margin-top: 1%;">
+<md-content layout-padding class="cont">
+<img src="img/KA.jpg" alt="Karnataka" style="width:150px;">
+    Karnataka is a state in southwest India with Arabian Sea coastlines. The capital, Bengaluru (formerly Bangalore), is a high-tech hub known for its shopping and nightlife. To the southwest, Mysore is home to lavish temples including Mysore Palace, former seat of the region’s maharajas. Hampi, once the medieval Vijayanagara empire’s capital, contains ruins of Hindu temples, elephant stables and a stone chariot.
+<a href="https://en.wikipedia.org/wiki/Karnataka">more ...</a>
+</md-content>
+</div>
+ </div>
+ 
+
+
+  <!-- </div>  -->
+  </md-menu-content> 
+            </md-menu>
+            
+            </li>
+      
+          <!--    <ul>
+                <li><a md-button aria-label="menu" href="#!/ui/typography"><i class="fa fa-circle"></i><span data-translate="TYPOGRAPHY"></span></a></li>
+                <li><a md-button aria-label="menu" href="#!/ui/buttons"><i class="fa fa-circle"></i><span data-translate="BUTTONS"></span></a></li>
+                <li><a md-button aria-label="menu" href="#!/ui/icons"><i class="fa fa-circle"></i><span data-translate="ICONS"></span> <span class="badge badge-info">3</span></a></li>
+                <li><a md-button aria-label="menu" href="#!/ui/lists"><i class="fa fa-circle"></i><span data-translate="LISTS"></span></a></li>
+                <li><a md-button aria-label="menu" href="#!/ui/components"><i class="fa fa-circle"></i><span data-translate="COMPONENTS"></span> <span class="badge badge-danger">17</span></a></li>
+                <li><a md-button aria-label="menu" href="#!/ui/cards"><i class="fa fa-circle"></i><span data-translate="CARDS"></span></a></li>
+                <li><a md-button aria-label="menu" href="#!/ui/pricing-tables"><i class="fa fa-circle"></i><span data-translate="PRICING_TABLES"></span></a></li>
+                <li><a md-button aria-label="menu" href="#!/ui/timeline"><i class="fa fa-circle"></i><span data-translate="TIMELINE"></span></a></li>
+                <li><a md-button aria-label="menu" href="#!/map/maps"><i class="fa fa-circle"></i><span data-translate="MAPS"></span></a></li>
+                <li><a md-button aria-label="menu" href="#!/ui/grids"><i class="fa fa-circle"></i><span data-translate="GRIDS"></span></a></li>
+            </ul> -->
+
+
+
+
+ 
+
+
         <li>
             <a md-button aria-label="menu" href="#!/ui"><i class="material-icons">card_giftcard</i><span><span data-translate="MATERIAL"></span> UI</span></a>
             <ul>
@@ -71,4 +146,40 @@
         <li class="li-small"><a href="#!/form/elements"><i class="fa fa-circle color-success"></i> <span data-translate="MATERIAL_ELEMENTS"></span></a></li>
         <li class="li-small"><a href="#!/ui/icons"><i class="fa fa-circle color-danger"></i> <span data-translate="MATERIAL_ICONS"></span></a></li>
     </ul>
+
 </div>
+         
+                <!-- TamilNadu -->
+<div layout="column" >
+  <div ng-hide="!TN"  style="float: right;margin-top: 1%;">
+<md-content layout-padding  class="cont">
+ 
+    <ul> 
+    <li>Tamil Nadu</li>
+    <li>Kerala</li>
+    <li>karnataka</li>
+    </ul>
+ <!--  <img src="img/TN.jpg" alt="TamilNadu" style="width:150px;">Tamil Nadu, a South Indian state, is famed for its Dravidian-style Hindu temples. In Madurai, Meenakshi Amman Temple has high ‘gopuram’ towers ornamented with colourful figures. On Pamban Island, Ramanathaswamy Temple is a pilgrimage site. The town of Kanyakumari, at India’s southernmost tip, is the site of ritual sunrises. Capital Chennai is known for beaches and landmarks including 1644 colonial Fort St. George.
+    <a href="https://en.wikipedia.org/wiki/Tamil_Nadu">more ...</a> -->
+</md-content>
+</div>
+ </div>
+ 
+ 
+ <style type="text/css">
+    .cont{
+        margin-left: 24px;border-size:1px;border-style:solid;border-color:#a7bfe5;
+    }
+img {
+    border: 1px solid #ddd; /* Gray border */
+    border-radius: 4px;  /* Rounded border */
+    padding: 5px; /* Some padding */
+    width: 150px; /* Set a small width */
+}
+
+/* Add a hover effect (blue shadow) */
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+</style>
+ 
